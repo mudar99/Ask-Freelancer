@@ -1,0 +1,566 @@
+#about {
+  .card {
+    background-color: $navbar-body-color;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    span,
+    h5,
+    p {
+      color: #eee;
+    }
+  }
+
+  .card:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #a5ebb5;
+    transform: scaleY(1);
+    transition: all 0.5s;
+    transform-origin: bottom;
+  }
+
+  .card:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #28a745;
+    transform: scaleY(0);
+    transition: all 0.5s;
+    transform-origin: bottom;
+  }
+  .card:hover::after {
+    transform: scaleY(1);
+  }
+  .fonts {
+    font-size: 1rem;
+  }
+  img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+  }
+  .social-list {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+  }
+  .social-list li {
+    padding: 10px;
+    font-size: 19px;
+  }
+  //Facebook
+  .social-list li:nth-child(1) {
+    color: #4267b2;
+  }
+  //Twitter
+  .social-list li:nth-child(2) {
+    color: #1da1f2;
+  }
+  //Instagram
+  .social-list li:nth-child(3) {
+    color: #c13584;
+  }
+  //LinkedIN
+  .social-list li:nth-child(4) {
+    color: #0e76a8;
+  }
+  //Google
+  .social-list li:nth-child(5) {
+    color: #ff3e30;
+  }
+}
+#navbar {
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 33px;
+      right: -60px;
+      background-color: $navbar-body-color;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      a {
+        color: $font-color;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        &:hover {
+          color: #eee;
+          background-color: $navbar-body-color;
+        }
+      }
+      .dropdown-item {
+        cursor: pointer;
+      }
+    }
+    &:hover .dropdown-content {
+      display: block;
+    }
+    #setting {
+      transition: transform 0.2s ease-in-out;
+    }
+    #setting:hover {
+      transform: rotate(60deg);
+    }
+  }
+  background-color: $navbar-body-color;
+  a {
+    transition: 0.1s ease-in;
+    color: $font-color;
+    &:hover {
+      transition: 0.1s ease-out;
+      color: #eee;
+      text-decoration: none;
+    }
+  }
+  .nav-link:hover,
+  #LogOutBtn {
+    cursor: pointer;
+    color: $font-color;
+  }
+  #LogOutBtn:hover {
+    color: #eee;
+  }
+}
+
+.goBtn {
+  float: right;
+}
+#projects {
+  .CodeIcon {
+    color: $font-color;
+  }
+  p {
+    color: $font-color;
+  }
+  h1 {
+    color: #eee;
+  }
+}
+#skills,#Posts{
+  .skills {
+    .span {
+      color: $font-color;
+    }
+    background-color: $navbar-body-color;
+  }
+  .ChipIcon {
+    color: $font-color;
+  }
+  p {
+    color: $font-color;
+  }
+  h1 {
+    color: #eee;
+  }
+}
+
+#testimonials {
+  .TerminalIcon {
+    color: $font-color;
+  }
+  .UsersIcon {
+    color: $font-color;
+  }
+  p {
+    color: $font-color;
+  }
+  h1 {
+    color: #eee;
+  }
+  .testimonials {
+    background-color: $navbar-body-color;
+    img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+    h1 {
+      color: #eee;
+    }
+  }
+}
+#contact {
+  margin-bottom: 200px;
+  .BriefcaseIcon {
+    color: $font-color;
+  }
+  p {
+    color: $font-color;
+  }
+  input {
+    background-color: $navbar-body-color;
+  }
+  h1 {
+    color: #eee;
+  }
+}
+
+/* **************** Gallery **************** */
+
+.Gallery {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.imagebox {
+  // min-height: 304px;
+  background: $profile-body-color;
+  padding: 1px;
+  text-align: center;
+  width: 100%;
+
+  img {
+    opacity: 1;
+    transition: 0.5s opacity;
+    height: auto;
+  }
+}
+.imagebox {
+  .imagebox-bar {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    bottom: 0px;
+    color: white;
+    font-size: 1.2em;
+    left: 0px;
+    padding: 10px 15px;
+    transition: 0.5s;
+    width: 100%;
+  }
+}
+
+.imagebox {
+  img:hover {
+    opacity: 0.7;
+  }
+}
+
+.imagebox:hover {
+  .imagebox-bar {
+    padding-bottom: 10%;
+  }
+}
+.info {
+  color: $font-color;
+  background-color: $navbar-body-color;
+  min-height: 190px;
+  word-wrap: break-word;
+  margin-top: 10px;
+}
+.deleteProjectBTN {
+  position: absolute;
+  top: 3%;
+  right: 2%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: #28a745;
+  cursor: pointer;
+  &:hover {
+    color: red;
+  }
+}
+.editProjectBTN {
+  position: absolute;
+  top: 3%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: #28a745;
+  cursor: pointer;
+  &:hover {
+    color: #85f49f;
+  }
+}
+
+/* **************** PopUp modal **************** */
+.modal-editInfo {
+  transition: 0.4s ease-in-out;
+  backdrop-filter: blur(8px);
+
+  div {
+    border-radius: 10px;
+    .modal-content {
+      background-color: $profile-body-color;
+    }
+    select {
+      color: #eee;
+      option,
+      &:focus {
+        background-color: $navbar-body-color;
+        color: #eee;
+      }
+
+      background-color: $navbar-body-color;
+    }
+    h5,
+    p {
+      color: #eee;
+    }
+  }
+}
+
+.darkMode {
+  .AboutEdit,
+  .ProjectsEdit,
+  .editProject,
+  .PasswordEdit,
+  .VerifyID {
+    h6 {
+      color: $font-color;
+    }
+    background-color: $navbar-body-color;
+  }
+}
+
+/* **************** TextArea **************** */
+.form-control,
+.form-control:focus {
+  background-color: $navbar-body-color;
+  color: $font-color;
+}
+
+textarea::-webkit-scrollbar {
+  width: 12px;
+  background-color: $profile-body-color;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #eee;
+}
+
+.small-ratings {
+  color: #eee;
+  i {
+    padding: 4px;
+  }
+  .rating-color {
+    color: #fbc634;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .imagebox {
+    img {
+      height: auto;
+    }
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .imagebox {
+    .imagebox-bar {
+      font-size: 1em;
+      padding: 5px 15px;
+    }
+    &:hover {
+      .imagebox-bar {
+        padding-bottom: 7%;
+      }
+    }
+    img {
+      height: 190px;
+    }
+  }
+}
+@media only screen and (max-width: 800px) {
+  .imagebox {
+    img {
+      height: 220px;
+    }
+  }
+}
+@media only screen and (max-width: 770px) {
+  .imagebox {
+    img {
+      height: 350px;
+    }
+  }
+}
+@mixin themable(
+  $theme-name,
+  $container-bg,
+  $title,
+  $text,
+  $hover-color,
+  $iconColor
+) {
+  .#{$theme-name} {
+    #navbar {
+      background-color: #eee;
+      a {
+        color: $text;
+        &:hover {
+          color: $hover-color;
+        }
+      }
+      .dropdown-menu {
+        background-color: #eee;
+        color: black;
+        .dropdown-item:hover {
+          background-color: #eee;
+          color: $iconColor;
+        }
+      }
+      .dropdown {
+        .dropdown-content {
+          background-color: #f9f9f9;
+          a {
+            color: black;
+            &:hover {
+              color: black;
+              background-color: #f1f1f1;
+            }
+          }
+        }
+      }
+      #LogOutBtn {
+        color: $text;
+        &:hover {
+          color: $hover-color;
+        }
+      }
+    }
+
+    #about {
+      .card {
+        background-color: white;
+        span,
+        h5,
+        p {
+          color: $text;
+        }
+      }
+    }
+
+    #projects {
+      .CodeIcon {
+        color: $iconColor;
+      }
+      p {
+        color: $text;
+      }
+      h1 {
+        color: $title;
+      }
+    }
+    #skills,#Posts {
+      .skills {
+        background-color: $container-bg;
+      }
+      .ChipIcon {
+        color: $iconColor;
+      }
+      p {
+        color: $text;
+      }
+      h1 {
+        color: $title;
+      }
+    }
+    #testimonials {
+      .TerminalIcon {
+        color: $text;
+      }
+      .UsersIcon {
+        color: $iconColor;
+      }
+      p {
+        color: $text;
+      }
+      h1 {
+        color: $title;
+      }
+      .testimonials {
+        background-color: $container-bg;
+      }
+    }
+    #contact {
+      .BriefcaseIcon {
+        color: $iconColor;
+      }
+      p {
+        color: $text;
+      }
+      input {
+        background-color: $container-bg;
+      }
+      h1 {
+        color: $title;
+      }
+    }
+
+    /* **************** Gallery **************** */
+
+    .imagebox {
+      background: $hover-color;
+      background-color: $container-bg;
+    }
+    .imagebox {
+      .imagebox-bar {
+        background-color: $iconColor;
+        color: white;
+      }
+    }
+
+    .info {
+      color: $text;
+      background-color: $container-bg;
+    }
+
+    /* **************** PopUp modal **************** */
+    .modal-editInfo {
+      div {
+        .modal-content {
+          background-color: $container-bg;
+        }
+        select {
+          option,
+          &:focus {
+            background-color: $container-bg;
+            color: $text;
+          }
+          background-color: $container-bg;
+        }
+      }
+      h5,
+      p {
+        color: $text;
+      }
+    }
+
+    /* **************** TextArea **************** */
+    .form-control,
+    .form-control:focus {
+      background-color: $container-bg;
+      color: $text;
+    }
+
+    textarea::-webkit-scrollbar {
+      background-color: $container-bg;
+    }
+  }
+  .AboutEdit,
+  .ProjectsEdit,
+  .editProject,
+  .PasswordEdit {
+    h6 {
+      color: $text;
+    }
+    background-color: $container-bg;
+  }
+}
+// @include themable(lightMode, white, #253529, #414a4c, #738678, #997a8d);
+@include themable(lightMode, white, #808080, #414a4c, #738678, #808080);
